@@ -1,0 +1,17 @@
+<form [formGroup]="searchForm"  (ngSubmit)="onSubmit()">
+  <h1>Search Data By ID</h1>
+    <div>
+      <label for="userId">
+        User Id
+      </label> 
+      <input id="userId" type="text"  formControlName="userId">
+    </div>
+  
+    <button type="submit" > Find </button> 
+  
+  </form>  
+  <div>
+  <h4>This will be enabled if userId exists</h4>
+  <button type="submit" [disabled]="!response">Submit</button>
+  </div>
+  
